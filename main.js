@@ -8,7 +8,7 @@ fetch(latest)
     mal.results.forEach((film) => {
       const card = `
       <div class="card text-left">
-      <a href="/view.html"><img class="card-img-top" src="https://image.tmdb.org/t/p/w500${film.poster_path}" alt=""></a>
+      <a href="/view.html?${film.id}"><img class="card-img-top" src="https://image.tmdb.org/t/p/w500${film.poster_path}" alt=""></a>
            <div class="card-body">
              <h6 class="card-title ">${film.original_title}</h6>
              <p class="card-text">${film.release_date}</p>
@@ -28,7 +28,7 @@ fetch(trend)
     mal.results.forEach((film) => {
       const card = `
       <div class="card text-left">
-      <a href="/view.html"><img class="card-img-top" src="https://image.tmdb.org/t/p/w500${film.poster_path}" alt=""></a>
+      <a href="/view.html?${film.id}"><img class="card-img-top" src="https://image.tmdb.org/t/p/w500${film.poster_path}" alt=""></a>
            <div class="card-body">
              <h6 class="card-title ">${film.original_title}</h6>
              <p class="card-text">${film.release_date}</p>
@@ -137,3 +137,11 @@ fetch($json_url)
     `;
     img_view.innerHTML+=card;
 })
+
+function myFunc(){
+  var active=document.querySelector('.active');
+  var noactive=document.querySelector('.noactive');
+  noactive.classList.replace('noactive','active');
+  active.classList.replace('active','noactive');
+}  
+

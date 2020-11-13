@@ -98,6 +98,11 @@ input[type="submit"]:hover{
     padding: 5px;
     border-radius: 14px;
 }
+.foo .noactive{
+    padding: 5px;
+    border-radius: 14px;
+
+}
 .active{
     color: cyan;
 }
@@ -181,3 +186,4 @@ span .dot1{
     width: 100vw;
     height: 53vh;
 }
+
