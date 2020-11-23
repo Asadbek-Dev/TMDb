@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header>
+        <ul>
+            <li>
+                <a href="/index.html"><img
+                        src="img/blue_short-8e7b30f73a4020692ccca9c88bafe5dcb6f8a62a4c6bc55cd9ba82bb2cd95f6c.svg"
+                        alt="" /></a>
+            </li>
+            <li>Movies</li>
+            <li>TV Shows</li>
+            <li>People</li>
+            <li>More</li>
+        </ul>
+        <ul>
+            <li><i class="fas fa-plus"></i></li>
+            <li>
+                <p id="lang-btn">EN</p>
+            </li>
+            <li>Login</li>
+            <li>Join TMDb</li>
+            <li><a id="linkToSearch" href="/search.html"><i class="fas fa-search" id="search-btn"></i></a></li>
+        </ul>
+    </header>
+    <section>
+        <div class="conatiner" id="banner1">
+            <div class="row pt-5 pl-5">
+                <div class="col-md-6">
+                    <h2 style="font-weight: 700;font-size:3em">Welcome.</h2>
+                </div>
+            </div>
+            <div class="row pl-5">
+                <div class="col-md-12">
+                    <h3 style="font-weight: 600;font-size:2em">
+                        Millions of movies, TV shows and people to discover. Explore now.
+                    </h3>
+                </div>
+            </div>
+            <div class="d-flex flex-wrap">
+                <form id="form" onsubmit="formHandler(event)" action="">
+                    <div class="row pl-5 pt-5">
+                        <div class="col-md-8"><input type="text" id="search_input" onchange="inputHandler()"
+                                placeholder="Search for a movie, tv show, person......" /></div>
+                        <div class="col-md-4"><input type="submit" value="Search" /></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container" id="cards1">
+            <div class="row mt-3">
+                <div class="col-md-3">
+                    <h3 style="font-weight: 600;font-size: 2em;">What's Popular</h3>
+                </div>
+                <div class="col-md-3">
+                    <div class="foo d-flex justify-content-between align-items-center">
+                        <div class="active" onclick="myFunc()"><a href="#" class="pl-2 text-decoration-none text-info">On TV</a></div>
+                        <div class="noactive" onclick="myFunc()"><a href="#" class="pr-2 text-decoration-none text-primary">In Theaters </a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="scrollmenu" id="scrollmenu">
+                    
+                </div>
+            </div>
+        </div>
+    </section>   
+     <section>
+        <div class="container" id="cards1">
+            <div class="row mt-3">
+                <div class="col-md-3">
+                    <h3 style="font-weight: 600;font-size: 2em;">Trending</h3>
+                </div>
+                <div class="col-md-3">
+                    <div class="foo d-flex justify-content-between align-items-center">
+                        <div class="active"><a href="#" class="pl-2 text-decoration-none text-info">Today</a></div>
+                        <div class="noactive"><a href="#" class="pr-2 text-decoration-none text-primary">This Week</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="scrollmenu" id="scroll_trend">
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="conatiner" id="banner2">
+            <div class="row mt-3">
+                <div class="col-md-3 pt-3 pl-5" >
+                    <h3 style="font-weight: 600;font-size: 2em;">Latest Trailers</h3>
+                </div>
+                <div class="col-md-3 pt-3 pl-5">
+                    <div class="foo d-flex justify-content-between align-items-center">
+                        <div class="active" onclick="myFunc()"><a href="#" class="pl-2 text-decoration-none text-info">On TV</a></div>
+                        <div class="noactive" onclick="myFunc()"><a href="#" class="pr-2 text-decoration-none text-primary">In Theaters </a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4 pl-4 ml-2">
+                <div class="scrollmenu mr-5" id="scroll_latest">
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
