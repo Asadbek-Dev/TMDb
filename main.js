@@ -89,8 +89,8 @@ function searchf(value) {
       data.results.forEach(item=>{
           const card=`
           <div class="longcard d-flex p-2 m-2" style="min-height:160px;">
-          <div class="card-image" style="min-width: 200px;min-height:350px;">
-              <img src="https://image.tmdb.org/t/p/w500${item.poster_path}"   alt="">
+          <div class="card-image">
+              <img src="https://image.tmdb.org/t/p/w500${item.poster_path}" style="width:125px;" alt="">
           </div>
           <div class="card-body" style="padding-top:0px;">
               <h5 style="padding:0;">${item.original_title}</h5>
@@ -113,8 +113,10 @@ fetch($json_url)
     console.log(data);
     const img_view=document.querySelector('#img_view');
     const card=`
-    <div class="container_view"  style="background-image:url(https://image.tmdb.org/t/p/w500${data.backdrop_path});background-size: cover;>
-    <div class="container"  >
+    <div class="container_view"  style="background-image:url(https://image.tmdb.org/t/p/w500${data.backdrop_path});background-size: cover;filter: blur(8px);-webkit-filter: blur(8px);">
+ 
+</div>
+   <div class="container">
     <div class="row d-flex justify-content-between">
     <div class="col-md-2" >
         <div class="card text-left ml-5" >
@@ -134,7 +136,7 @@ fetch($json_url)
 
     </div>
 </div>
-</div></div>
+</div>
     `;
     img_view.innerHTML+=card;
 })
